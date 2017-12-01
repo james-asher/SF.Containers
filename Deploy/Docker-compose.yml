@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  www_sh:
+    image: jamesasher/selfhost
+    ports:
+      - 80:80
+networks:
+  default:
+    external:
+      name: nat
+
+# Connect-ServiceFabricCluster
+# New-ServiceFabricComposeDeployment -DeploymentName MySelfHostedApp -Compose docker-compose.yml
